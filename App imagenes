@@ -1,0 +1,63 @@
+package com.rick.diagnostico;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import java.util.Random;
+
+public class MainActivity extends AppCompatActivity {
+
+    private ImageView imagem;
+    int r=0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        imagem=(ImageView) findViewById(R.id.imagem);
+    }
+    public void BotonImagenes(View view){
+        Toast.makeText(this, " Nos cambiara otra imagen a mostrar", Toast.LENGTH_SHORT).show();
+
+        Random r = new Random();
+        int rNumber = r.nextInt(10) +1;
+
+        if (rNumber ==1){
+            imagem.setImageResource(R.drawable.png1);
+        }
+        else if (rNumber ==2){
+            imagem.setImageResource(R.drawable.png2);
+        }
+        else if (rNumber ==3){
+            imagem.setImageResource(R.drawable.png3);
+        }
+        else if (rNumber ==4){
+            imagem.setImageResource(R.drawable.png4);
+        }
+        else if (rNumber ==5){
+            imagem.setImageResource(R.drawable.png5);
+        }
+        else if (rNumber ==6){
+            imagem.setImageResource(R.drawable.png6);
+        }
+        else if (rNumber ==7){
+            imagem.setImageResource(R.drawable.png7);
+        }
+        else if (rNumber ==8){
+            imagem.setImageResource(R.drawable.png8);
+        }
+        else if (rNumber ==9){
+            imagem.setImageResource(R.drawable.png9);
+        }
+        else if (rNumber ==10){
+            imagem.setImageResource(R.drawable.png10);
+        }
+        else if (rNumber ==11){
+            imagem.setImageResource(R.drawable.png11);
+        }
+    }
+}
